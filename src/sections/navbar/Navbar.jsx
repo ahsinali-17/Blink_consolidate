@@ -71,16 +71,16 @@ const Navbar = () => {
     <>
       {/* Desktop/Tablet Navbar */}
       <nav 
-        className="hidden md:flex fixed top-0 left-0 right-0 z-40 transition-all duration-300"
+        className="hidden md:flex fixed top-0 left-0 right-0 z-40 transition-all duration-300 px-5 lg:px-10 py-4"
         style={{ 
           backgroundColor: isScrolled 
-            ? (isDark ? 'rgba(0, 0, 0, 0.95)' : 'rgba(255, 255, 255, 0.95)') 
-            : 'rgba(255, 255, 255, 0)',
+            ? (isDark ? 'rgba(235, 146, 87, 0.5)' : 'rgba(235, 146, 87, 0.5)') 
+            : 'transparent',
           backdropFilter: isScrolled ? 'blur(10px)' : 'none',
           boxShadow: 'none'
         }}
       >
-        <div className="w-full flex items-center justify-end px-8 lg:px-12 xl:px-16 py-4">
+        <div className="w-full flex items-center justify-end">
           {/* Logo - Empty as in Flutter */}
           <div className="flex-shrink-0">
             <NavbarLogo height={window.innerWidth < 780 ? 20 : window.innerHeight * 0.035} />
@@ -96,7 +96,7 @@ const Navbar = () => {
                   style={{ 
                     color: colors.text,
                     fontFamily: 'inherit',
-                    padding: '0.5rem 1.5rem'
+                    padding: '0.5rem 1rem'
                   }}
                   onMouseEnter={(e) => {
                     gsap.to(e.currentTarget, { 
@@ -149,7 +149,8 @@ const Navbar = () => {
                 className="relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
                 style={{ 
                   backgroundColor: isDark ? colors.primary : '#ccc',
-                  focusRingColor: colors.primary 
+                  focusRingColor: colors.primary,
+                  margin: '0rem 1.25rem'
                 }}
               >
                 <span
@@ -167,8 +168,8 @@ const Navbar = () => {
         className="md:hidden fixed top-0 left-0 right-0 z-40 transition-all duration-300"
         style={{ 
           backgroundColor: isScrolled 
-            ? (isDark ? 'rgba(0, 0, 0, 0.95)' : 'rgba(255, 255, 255, 0.95)') 
-            : 'rgba(255, 255, 255, 0)',
+            ? (isDark ? 'rgba(255, 140, 0, 0.9)' : 'rgba(255, 165, 0, 0.85)') 
+            : 'transparent',
           backdropFilter: isScrolled ? 'blur(10px)' : 'none',
           boxShadow: 'none'
         }}

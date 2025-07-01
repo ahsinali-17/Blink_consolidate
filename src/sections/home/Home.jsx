@@ -126,14 +126,14 @@ const Home = () => {
           <div className="lg:col-span-7 space-y-6 lg:space-y-8">
             
             {/* Welcome Section */}
-            <div ref={welcomeRef} className="flex items-center space-x-4 mb-4">
+            <div ref={welcomeRef} className="flex items-center gap-4 mb-4">
               <span 
                 className="text-lg sm:text-xl lg:text-2xl font-light montserrat-font tracking-wide"
                 style={{ color: colors.text }}
               >
                 WELCOME TO!
               </span>
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden flex-shrink-0">
                 <img 
                   src="/assets/images/logo.png" 
                   alt="Logo" 
