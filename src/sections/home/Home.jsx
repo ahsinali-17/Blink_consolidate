@@ -92,7 +92,7 @@ const Home = () => {
   const socialIcons = [
     {
       icon: faFacebook,
-      url: "https://www.facebook.com/103383758631665/posts/103385448631496/?substory_index=0",
+      url: "https://www.facebook.com/103383758631665/posts",
       color: "#1877F2"
     },
     {
@@ -163,7 +163,7 @@ const Home = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div ref={socialRef} className="flex justify-center items-center gap-4 pt-4">
+            <div ref={socialRef} className="flex justify-start items-center gap-4 pt-4">
               {socialIcons.map((social, index) => (
                 <a
                   key={index}

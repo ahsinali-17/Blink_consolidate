@@ -63,7 +63,7 @@ const ServiceCard = ({ service, index }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
-        backgroundColor: colors.background,
+        backgroundColor: colors.surface,
         boxShadow: '0 10px 30px rgba(8, 8, 8, 0.571)'
       }}
     >
