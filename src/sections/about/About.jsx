@@ -1,30 +1,59 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useTheme } from '../../context/ThemeContext'
+import { portfolioData } from '../../data/portfolioData'
+import gsap from 'gsap'
 
 const About = () => {
-  const themeContext = useTheme()
-  const { colors } = themeContext
+  const { colors } = useTheme()
 
   return (
-    <div 
-      className="min-h-screen flex items-center justify-center"
+    <section 
+      id="about"
+      className="w-full pt-10 lg:pt-16"
       style={{ backgroundColor: colors.background }}
     >
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-20 lg:py-24">
-        <h2 
-          className="text-4xl md:text-6xl font-bold text-center mb-8"
-          style={{ color: colors.text }}
-        >
-          About Section
-        </h2>
-        <p 
-          className="text-center text-lg"
-          style={{ color: colors.textSecondary }}
-        >
-          About section content will be implemented here
-        </p>
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-0">
+          
+          {/* Section Heading */}
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <h2 
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin montserrat-font tracking-wider"
+              style={{ 
+                color: colors.text,
+                letterSpacing: '0.05em'
+              }}
+            >
+              About Us
+            </h2>
+          </div>
+
+          {/* Content */}
+          <div className="flex justify-center">
+            <div className="w-full lg:w-4/5">
+              <div 
+                className="mb-8 lg:mb-12"
+              >
+                <p 
+                  className="text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-light montserrat-font leading-relaxed lg:leading-loose text-center"
+                  style={{ 
+                    color: '#808080',
+                    lineHeight: '2.0'
+                  }}
+                >
+                  {portfolioData.personal.aboutCompany}
+                </p>
+              </div>
+
+              {/* Divider */}
+              <div 
+                className="w-full h-0.5 md:h-1"
+                style={{ backgroundColor: '#404040' }}
+              />
+            </div>
+          </div>
+
       </div>
-    </div>
+    </section>
   )
 }
 

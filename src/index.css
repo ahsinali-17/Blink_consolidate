@@ -99,6 +99,21 @@ body {
   animation: twinkle 2s ease-in-out infinite;
 }
 
+/* Typed.js cursor styling */
+.typed-cursor {
+  color: var(--primary-color) !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+}
+
+.typed-cursor--blink {
+  animation: typedjsBlink 0.7s infinite !important;
+}
+
+@keyframes typedjsBlink {
+  50% { opacity: 0; }
+}
+
 /* Typed element styling */
 .typed-element {
   font-family: 'Montserrat', sans-serif;

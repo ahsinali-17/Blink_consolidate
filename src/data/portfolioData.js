@@ -63,37 +63,37 @@ export const portfolioData = {
     {
       id: 1,
       name: "Mobile App Development", 
-      description: "Android, iOS app development via Flutter",
-      icon: "/assets/services/app.png",
+      description: "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!",
+      icon: "/assets/services/mobile.jpg",
       category: "development"
     },
     {
       id: 2,
       name: "Web Development",
-      description: "Web app development via Flutter", 
-      icon: "/assets/services/web.png",
+      description: "Modern Web Development\n- React & Next.js\n- Flutter Web\n- Responsive Design\n- Progressive Web Apps\n- API Integration and more...!", 
+      icon: "/assets/services/web.jpg",
       category: "development"
     },
     {
       id: 3,
       name: "UI/UX Design",
-      description: "Modern UI/UX Designing",
-      icon: "/assets/services/ui.png", 
+      description:"Modern UI/UX Designing\n- Adobe XD\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!",
+      icon: "/assets/services/ux.jpg", 
       category: "design"
     },
     {
       id: 4,
-      name: "Open Source - GitHub",
-      description: "Open source GitHub Projects",
-      icon: "/assets/services/open.png",
-      category: "open-source"
+      name: "Digital Marketing",
+      description: "Comprehensive Digital Marketing\n- Social Media Marketing\n- Content Marketing\n- Brand Strategy\n- Campaign Management\n- Analytics & Reporting and more...!",
+      icon: "/assets/services/Marketing.png",
+      category: "marketing"
     },
     {
       id: 5,
-      name: "Technical Writing",
-      description: "Documenting and writing technical blogs",
-      icon: "/assets/services/blog.png",
-      category: "writing"
+      name: "Search Engine Optimization",
+      description: "Professional SEO Services\n- Keyword Research\n- On-page Optimization\n- Technical SEO\n- Link Building\n- Performance Analytics and more...!",
+      icon: "/assets/services/search.png",
+      category: "seo"
     }
   ],
 
