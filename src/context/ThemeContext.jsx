@@ -42,7 +42,7 @@ export const ThemeProvider = ({ children }) => {
       primary: '#C0392B', // Same as Flutter kPrimaryColor (#C0392B)
       secondary: isDark ? '#C0392B' : '#000000',
       background: isDark ? '#000000' : '#FFFFFF',
-      surface: isDark ? '#1E1E1E' : '#e9e3e3d5',
+      surface: isDark ? '#1E1E1E' : '#ffff',
       text: isDark ? '#FFFFFF' : '#000000',
       textSecondary: isDark ? '#B0B0B0' : '#666666',
       border: isDark ? '#333333' : '#E0E0E0',

@@ -9,15 +9,15 @@ const About = () => {
   return (
     <section 
       id="about"
-      className="w-full pt-10 lg:pt-16"
+      className="w-full"
       style={{ backgroundColor: colors.background }}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-0">
           
           {/* Section Heading */}
-          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+          <div className="text-center mb-6 md:mb-8 lg:mb-12">
             <h2 
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin montserrat-font tracking-wider"
+              className="text-3xl lg:text-5xl font-thin montserrat-font tracking-wider"
               style={{ 
                 color: colors.text,
                 letterSpacing: '0.05em'

@@ -18,7 +18,7 @@ const Services = () => {
           {/* Section Heading */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
             <h2
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-thin montserrat-font tracking-wider mb-4"
+              className="text-3xl lg:text-5xl font-thin montserrat-font tracking-wider mb-4"
               style={{ 
                 color: colors.text,
                 letterSpacing: '0.05em'
