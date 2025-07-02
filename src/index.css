@@ -36,10 +36,8 @@
   --border-color: #333333;
 }
 
-/* Global styles */
-* {
-  margin: 0;
-  padding: 0;
+/* Box sizing reset */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -82,5 +80,26 @@ body {
 }
 
 .montserrat-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Twinkle animation for decorative elements */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* Typed element styling */
+.typed-element {
   font-family: 'Montserrat', sans-serif;
 }

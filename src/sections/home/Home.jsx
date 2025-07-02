@@ -5,6 +5,7 @@ import { faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useTheme } from '../../context/ThemeContext'
 import { portfolioData } from '../../data/portfolioData'
 import gsap from 'gsap'
+import Typed from 'typed.js'
 
 const Home = () => {
   const themeContext = useTheme()
@@ -15,42 +16,30 @@ const Home = () => {
   const subtitleRef = useRef(null)
   const socialRef = useRef(null)
   const logoRef = useRef(null)
-  const typingTextRef = useRef(null)
+  const typedElementRef = useRef(null)
 
-  // Typing animation state
-  const [currentTextIndex, setCurrentTextIndex] = React.useState(0)
-  const [currentText, setCurrentText] = React.useState('')
-  const [isDeleting, setIsDeleting] = React.useState(false)
-
-  // Typing animation effect
+  // Typed.js animation effect
   useEffect(() => {
-    const texts = portfolioData.personal.subtitle
-    const typingSpeed = 50
-    const deletingSpeed = 30
-    const pauseTime = 2000
+    const typed = new Typed(typedElementRef.current, {
+      strings: portfolioData.personal.subtitle,
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      startDelay: 1000,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+      contentType: 'html',
+      smartBackspace: true,
+      fadeOut: false,
+      fadeOutClass: 'typed-fade-out',
+      fadeOutDelay: 500
+    })
 
-    const handleTyping = () => {
-      const fullText = texts[currentTextIndex]
-
-      if (!isDeleting) {
-        setCurrentText(fullText.substring(0, currentText.length + 1))
-        
-        if (currentText === fullText) {
-          setTimeout(() => setIsDeleting(true), pauseTime)
-        }
-      } else {
-        setCurrentText(fullText.substring(0, currentText.length - 1))
-        
-        if (currentText === '') {
-          setIsDeleting(false)
-          setCurrentTextIndex((currentTextIndex + 1) % texts.length)
-        }
-      }
+    return () => {
+      typed.destroy()
     }
-
-    const timer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed)
-    return () => clearTimeout(timer)
-  }, [currentText, isDeleting, currentTextIndex])
+  }, [])
 
   // GSAP animations
   useEffect(() => {
@@ -119,14 +108,14 @@ const Home = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{ backgroundColor: colors.background }}
     >
-      <div className="w-4/5 mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 py-16 sm:py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="w-full md:w-4/5 mx-auto px-8 md:px-0 py-16 sm:py-20 lg:py-24">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           
           {/* Left Content */}
-          <div className="lg:col-span-7 space-y-6 lg:space-y-8">
+          <div className="w-full lg:w-3/5 space-y-6 lg:space-y-8">
             
             {/* Welcome Section */}
-            <div ref={welcomeRef} className="flex items-center gap-4 mb-4">
+            <div ref={welcomeRef} className="w-full flex items-center justify-center lg:justify-start gap-4 mb-4">
               <span 
                 className="text-lg sm:text-xl lg:text-2xl font-light montserrat-font tracking-wide"
                 style={{ color: colors.text }}
@@ -143,7 +132,7 @@ const Home = () => {
             </div>
 
             {/* Main Title */}
-            <div ref={titleRef} className="space-y-2 lg:space-y-4">
+            <div ref={titleRef} className="space-y-2 lg:space-y-4 w-full flex flex-col items-center lg:items-start">
               <h1 
                 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-thin montserrat-font tracking-wider leading-none"
                 style={{ color: colors.text, letterSpacing: '0.1em' }}
@@ -159,24 +148,17 @@ const Home = () => {
             </div>
 
             {/* Animated Subtitle */}
-            <div ref={subtitleRef} className="flex items-center space-x-3 h-8 lg:h-10">
+            <div ref={subtitleRef} className="flex items-center justify-center lg:justify-start space-x-3 h-8 lg:h-10">
               <FontAwesomeIcon 
                 icon={faPlay} 
                 className="text-2xl lg:text-3xl"
                 style={{ color: colors.primary }}
               />
-              <div 
-                ref={typingTextRef}
-                className="text-lg sm:text-xl lg:text-2xl font-light montserrat-font min-w-0"
-                style={{ color: colors.text }}
-              >
-                {currentText}
+              <div className="text-lg sm:text-xl lg:text-2xl font-light montserrat-font min-w-0">
                 <span 
-                  className="animate-pulse ml-1"
-                  style={{ color: colors.primary }}
-                >
-                  |
-                </span>
+                  ref={typedElementRef}
+                  className="typed-element text-[#C0392B]"
+                />
               </div>
             </div>
 
@@ -228,7 +210,7 @@ const Home = () => {
           </div>
 
           {/* Right Content - Logo/Image */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end mt-12 lg:mt-0">
+          <div className="w-full lg:w-2/5 flex justify-center lg:justify-end mt-12 lg:mt-0">
             <div 
               ref={logoRef}
               className="relative max-w-xs lg:max-w-sm xl:max-w-md"

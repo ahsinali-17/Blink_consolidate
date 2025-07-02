@@ -18,7 +18,7 @@ const Footer = () => {
           className="text-sm"
           style={{ color: colors.textSecondary }}
         >
-          © 2024 Blink Consolidate. All rights reserved.
+          © 2025 Blink Consolidate. All rights reserved.
         </p>
       </div>
     </footer>
