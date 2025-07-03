@@ -50,7 +50,7 @@ const Services = () => {
 
        {/* Divider */}
               <div 
-                className="w-full h-0.5 md:h-1"
+                className="w-full lg:w-4/5 mx-auto h-0.5 md:h-1"
                 style={{ backgroundColor: '#404040' }}
               />
     </section>

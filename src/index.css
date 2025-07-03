@@ -15,27 +15,6 @@
   font-style: normal;
 }
 
-/* CSS Variables for theming */
-:root {
-  --primary-color: #FF5722;
-  --secondary-color: #000000;
-  --background-color: #FFFFFF;
-  --surface-color: #F5F5F5;
-  --text-color: #000000;
-  --text-secondary-color: #666666;
-  --border-color: #E0E0E0;
-  --accent-color: #FFC107;
-}
-
-.dark {
-  --secondary-color: #FF5722;
-  --background-color: #000000;
-  --surface-color: #1E1E1E;
-  --text-color: #FFFFFF;
-  --text-secondary-color: #B0B0B0;
-  --border-color: #333333;
-}
-
 /* Box sizing reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -118,3 +97,5 @@ body {
 .typed-element {
   font-family: 'Montserrat', sans-serif;
 }
+
+

@@ -169,7 +169,7 @@ export const portfolioData = {
   contact: {
     phone: "(+92) 346 0159889",
     email: "jobs@mhmz.com", 
-    location: "Lahore, Pakistan",
+    location: "Saman Arcade Gulberg 3 Office#S9 2nd Floor Lahore",
     whatsapp: "https://wa.me/923460159889"
   },
 

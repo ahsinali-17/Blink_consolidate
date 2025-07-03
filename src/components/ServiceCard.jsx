@@ -49,7 +49,7 @@ const ServiceCard = ({ service, index }) => {
   const handleMouseLeave = () => {
     gsap.to(cardRef.current, {
       y: 0,
-      boxShadow: `0 10px 30px rgba(0, 0, 0, 0.1)`,
+      boxShadow: `0 10px 30px rgba(8, 8, 8, 0.571)`,
       duration: 0.3,
       ease: "power2.out"
     })
